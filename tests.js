@@ -28,8 +28,41 @@ describe('helloWorld', function() {
 });
 
 describe("sayHello", function() {
-    it("should be a defined function", function() {
+    it("should be a defined function.", function() {
         expect(typeof sayHello).toBe("function");
+    });
+    it("should return a string when called.", function(){
+        expect(typeof sayHello()).toBe("string");
+    });
+    it("sayHello('Jane') should return 'Hello, Jane!'", function() {
+        expect(sayHello("Jane")).toBe("Hello, Jane!");
+    });
+    it("sayHello('Alex') should return 'Hello, Alex!'", function() {
+        expect(sayHello("Alex")).toBe("Hello, Alex!");
+    });
+    it("sayHello('Pat') should return 'Hello, Pat!'", function() {
+        expect(sayHello("Pat")).toBe("Hello, Pat!");
+    });
+    it('should return the string "Hello, World!" when executed without args', function() {
+        expect(helloWorld()).toBe("Hello, World!");
+    });
+    it("helloWorld(true) should return 'Hello, World!'", function() {
+        expect(helloWorld(true)).toBe("Hello, World!");
+    });
+    it("helloWorld(fasle) should return 'Hello, World!'", function() {
+        expect(helloWorld(false)).toBe("Hello, World!");
+    });
+    it("helloWorld(null) should return 'Hello World!'", function() {
+        expect(helloWorld(null)).toBe("Hello, World!");
+    });
+    it("helloWorld('') should return 'Hello World!'", function() {
+        expect(helloWorld('')).toBe("Hello, World!");
+    });
+    it("helloWorld(2.3) should return 'Hello World!'", function() {
+        expect(helloWorld(2.3)).toBe("Hello, World!");
+    });
+    it("helloWorld('5') should return 'Hello World!'", function() {
+        expect(helloWorld("5")).toBe("Hello, World!");
     });
 
 
