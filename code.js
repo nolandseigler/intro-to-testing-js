@@ -18,5 +18,6 @@ const isVowel = function (input) {
     return (isNaN(input) && typeof input === "string" && (input.match(/^[aeiou]/i) !== null));
 };
 const add = function (input1, input2) {
-    return (!isNaN(input1) && !isNaN(input2) ? parseInt(input1) + parseInt(input2) : NaN);
+    // var NaNPlaceholder = parseInt("squirrel");
+    return (isNaN(input1) || isNaN(input2) ? NaN : parseInt(input1) + parseInt(input2));
 };
