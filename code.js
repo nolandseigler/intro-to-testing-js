@@ -11,3 +11,6 @@ const sayHello = function (input) {
 const isFive = function (input) {
     return (!isNaN(input) && parseFloat(input) === 5 ? true : false);
 }
+const isEven = function (input) {
+    return (!isNaN(input) && parseInt(input) % 2 === 0 ? true : false);
+}

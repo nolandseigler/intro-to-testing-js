@@ -43,7 +43,7 @@ describe("sayHello", function() {
     it("sayHello('Pat') should return 'Hello, Pat!'", function() {
         expect(sayHello("Pat")).toBe("Hello, Pat!");
     });
-    it('should return the string "Hello, World!" when executed without args', function() {
+    it("should return the string 'Hello, World!' when executed without args", function() {
         expect(helloWorld()).toBe("Hello, World!");
     });
     it("helloWorld(true) should return 'Hello, World!'", function() {
@@ -87,11 +87,42 @@ describe("isFive", function() {
     it("isFive(-5) should return false", function() {
         expect(isFive(5.25)).toBe(false);
     });
-    it("isFive(5) should return false", function() {
+    it("isFive(5) should return true", function() {
         expect(isFive(5)).toBe(true);
     });
-    it("isFive('5') should return false", function() {
+    it("isFive('5') should return true", function() {
         expect(isFive('5')).toBe(true);
     });
-
+})
+describe("isEven", function() {
+    it("should be a defined function", function() {
+        expect(typeof isEven).toBe("function");
+    });
+    it("isEven(2) should return true", function() {
+        expect(isEven(2)).toBe(true);
+    });
+    it("isEven(-4) should return true", function() {
+        expect(isEven(-4)).toBe(true);
+    });
+    it("isEven(3) should return false", function() {
+        expect(isEven(3)).toBe(false);
+    });
+    it("isEven('banana') should return false", function() {
+        expect(isEven("banana")).toBe(false);
+    });
+    it("isEven('8') should return true", function() {
+        expect(isEven("8")).toBe(true);
+    });
+    it("isEven(Infinity) should return false", function() {
+        expect(isEven(Infinity)).toBe(false);
+    });
+    it("isEven(true) should return false", function() {
+        expect(isEven(true)).toBe(false);
+    });
+    it("isEven(false) should return false", function() {
+        expect(isEven(false)).toBe(false);
+    });
+    it("isEven() should return false", function() {
+        expect(isEven(null)).toBe(false);
+    });
 })
