@@ -9,8 +9,11 @@ const sayHello = function (input) {
     return (isNaN(input) && typeof input === "string" ? "Hello, " + input + "!" : "That is not a valid name.");
 };
 const isFive = function (input) {
-    return (!isNaN(input) && parseFloat(input) === 5 ? true : false);
-}
+    return (!isNaN(input) && parseFloat(input) === 5);
+};
 const isEven = function (input) {
-    return (!isNaN(input) && parseInt(input) % 2 === 0 ? true : false);
-}
+    return (!isNaN(input) && parseInt(input) % 2 === 0);
+};
+const isVowel = function (input) {
+    return (isNaN(input) && typeof input === "string" && (input.match(/^[aeiou]/i) !== null));
+};
